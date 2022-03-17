@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đếm số nguyên âm</title>
+</head>
+<body>
+<script>
+    function demsokytu(str) {
+        let nguyenam = ["u", "e", "o", "a", "i"];
+        let array = str.split("");
+        console.log(array);
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < nguyenam.length; j++) {
+                if (array[i].toLowerCase() == nguyenam[j]) {
+                    count++
+                }
+            }
+        }
+        if (count) {
+            return "Số ký tự nguyên âm trong chuỗi là: " + count
+        } else {
+            return false;
+        }
+    }
+    console.log(demsokytu("KiEn"));
+    console.log(demsokytu("xxx"));
+</script>
+</body>
+</html>
